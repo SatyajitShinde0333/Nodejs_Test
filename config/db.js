@@ -1,12 +1,11 @@
 const mysql = require('mysql2');
 
 const db = mysql.createConnection({
-    host: 'db-technical-test.conqt.com',
+    host: 'nodejs-technical-test.cm30rlobuoic.ap-southeast-1.rds.amazonaws.com',
     user: 'candidate',
     password: 'NoTeDeSt^C10.6?SxwY882}',
-    database: 'nodejs_test'
+    database: 'conqtvms_dev'
 });
-
 
 db.connect((err) => {
     if (err) {
