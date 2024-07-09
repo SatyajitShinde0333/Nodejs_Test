@@ -17,7 +17,8 @@ const getVendorUsers = (req, res) => {
 
     db.query(query, [prId, custOrgId], (error, results) => {
         if (error) {
-            return res.status(500).json({ error: error.message });
+            console.error('Database query error:', error);
+            return res.status(500).json({ error: 'Database error occurred' });
         }
         res.json(results);
     });
